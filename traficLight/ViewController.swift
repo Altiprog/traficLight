@@ -59,22 +59,31 @@ class ViewController: UIViewController {
         
         button.setTitle("NEXT", for: UIControl.State .normal)
        
-            switch trafficLightColors {
-                    case .off:
-                        redColor .alpha = 1
-                        trafficLightColors = .red
-                    case .red:
-                        redColor.alpha = 0.3
-                        yellowColor.alpha = 1
-                        trafficLightColors = .yellow
-                    case .yellow:
-                        yellowColor.alpha = 0.3
-                        greenColor.alpha = 1
-                        trafficLightColors = .green
-                    case .green:
-                        greenColor.alpha = 0.3
-                        redColor.alpha = 1
-                        trafficLightColors = .red
+        switch trafficLightColors {
+                case .off:
+                    redColor .alpha = 1
+            button.backgroundColor = UIColor.red
+            button.setTitleColor(UIColor.black, for: .normal)
+                    trafficLightColors = .red
+                case .red:
+                    redColor.alpha = 0.3
+                    yellowColor.alpha = 1
+            button.backgroundColor = UIColor.yellow
+            button.setTitleColor(UIColor.black, for: .normal)
+                    trafficLightColors = .yellow
+                case .yellow:
+                    yellowColor.alpha = 0.3
+                    greenColor.alpha = 1
+            button.backgroundColor = UIColor.green
+            button.setTitleColor(UIColor.black, for: .normal)
+                    trafficLightColors = .green
+                case .green:
+                    greenColor.alpha = 0.3
+                    redColor.alpha = 1
+            button.backgroundColor = UIColor.red
+            button.setTitleColor(UIColor.black, for: .normal)
+                    trafficLightColors = .red
+    
         }
       
             }
