@@ -7,34 +7,27 @@
 
 import UIKit
 
+enum TrafficLightColors {
+    case off
+    case red
+    case yellow
+    case green
+}
+
+    
 class ViewController: UIViewController {
     
     @IBOutlet weak var redColor: UIView!
-    
     @IBOutlet weak var yellowColor: UIView!
-    
     @IBOutlet weak var greenColor: UIView!
-    
-    @IBOutlet var allColors: [UIView]!
-    
+   
     @IBOutlet weak var button: UIButton!
-    
-    
-    enum TrafficLightColors {
-            case off
-            case red
-            case yellow
-            case green
-    }
 
-    var trafficLightColors = TrafficLightColors.off
-    
+    private var trafficLightColors = TrafficLightColors.off
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
+  
         redColor.layer.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         redColor.alpha = 0.3
         redColor.layer.cornerRadius = 75
@@ -53,8 +46,6 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 15
     }
 
-    
-    
     @IBAction func buttonAction() {
         
         button.setTitle("NEXT", for: UIControl.State .normal)
